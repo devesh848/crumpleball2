@@ -2,26 +2,19 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
-const Body = Matter.Body;
-
-function preload()
-{
-	
-}
 
 function setup() {
-	createCanvas(1600, 700); 
+	createCanvas(1600, 600); 
 	
-
-
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
 	
-	paper = new Paper(200,450,70);  
-	ground = new Ground(width/2,670,width,20);
-	dustbin = new Dustbin(1200,650);  
+	
+	ground = new Ground(width/2,570,width,20);
+	paper = new Paper(200,400,70);  
+	dustbin = new Dustbin(1200,550);  
 	
 	Engine.run(engine);
   
@@ -31,8 +24,8 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(255);
-  ground.display(); 
   paper.display();   
+  ground.display(); 
   dustbin.display();  
  
   
